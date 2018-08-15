@@ -1,0 +1,30 @@
+{
+  "name": "javascript-candidate-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jamiemac87/javascript-candidate-test.git",
+  "author": "Jamie McInerney <jamie@flypay.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "clean": "rm -rf dist",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "yarn test --watch"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.1",
+    "@types/faker": "^4.1.2",
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.3.2",
+    "faker": "^4.1.0",
+    "jest": "^23.1.0",
+    "prettier": "^1.13.5",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "minimist": "^1.2.0"
+  }
+}
