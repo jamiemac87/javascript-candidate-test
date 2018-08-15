@@ -41,21 +41,20 @@ export function findNearest(input: number, values: number[] = [3, -20, 1, 8, 7, 
  * @param arr 
  */
 export function orderArray(arr: number[] = []): number[] {
-  let done = false;
+  let swapped;
 
-  while (!done) {
-    done = true;
-
-    for (var i = 1; i < arr.length; i += 1) {
+  do {
+    swapped = false;
+    for (let i = 0; i < arr.length; i++) {
       const curr = arr[i];
-      const prev = arr[i - 1];
-      if (prev > curr) {
-        done = false;
-        arr[i - 1] = curr;
-        arr[i] = prev;
+      const next = arr[i + 1];
+      if (curr > next) {
+        arr[i] = next;
+        arr[i + 1] = curr;
+        swapped = true;
       }
     }
-  }
+  } while (swapped)
 
   return arr;
 }
